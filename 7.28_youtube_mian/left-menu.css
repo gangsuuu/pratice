@@ -15,6 +15,13 @@ body{
     height: 100%;
     display: flex;
 }
+ul{
+    list-style-type:none;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
 .menu-box{
 }
 .menu-box button{
@@ -23,6 +30,7 @@ body{
     height: 35px;
 
 }
+
 /********************************************
     header-mid (seach)
 *********************************************/
@@ -105,14 +113,100 @@ body{
 .mid-content{
     width: 100%;
     height: 100%;
+    text-align: center;
 }
 .mid-content-top{
-   border-top:1px solid #aaaaaa;
-   width: 100%;
-   height: 80px;
+    border-top:1px solid #aaaaaa;
+    width: 100%;
+    height: 60px;
+ }
+.mid-content ul{
+    display: inline-block;
+    margin:20px;
+}
+#content-selected{
+    color:white;
+    background-color: black;
+    border-color:black;
+}
+.mid-content ul li{
+    float:left;
+}
+.mid-content ul li a{
+    background-color: #f1f1f1;
+    border:1px solid #aaaaaa; 
+    border-radius: 20px;
+    padding:5px 8px;
+    margin:0px 5px;
+    font-size:14px;
+}
+.mid-content ul li a:hover:not(#content-selected){
+    background-color: #bdbdbd;
+    border:1px solid #a3a3a3; 
+}
+.mid-content-ad{
+    background-color: aqua;
+    width: 100%;
+    height:200px;
+    border-top:1px solid #aaaaaa;
+    position: relative;
+}
+.adbtn{
+    position: relative;
+    top:10px;
+    right:-48%;
+    width: 15px;
+    height: 15px;
 }
 
-
+/********************************************
+    mid-cotent-main
+*********************************************/
 .mid-content-main{
     border-top:1px solid #aaaaaa;
+    display: flex;
+    justify-content: center;
+}
+article{
+    border:1px solid red
+}
+article .thumbnails{
+    width:250px;
+    height: 150px;
+    border:1px solid green;
+}
+article .content-bottom{
+    border: 1px solid orange;
+    width:250px;
+}
+article .chanel-profill{
+    float:left;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border:1px solid gold;
+    margin: 5px;
+}
+article .chanel-interface{
+    text-align: left;
+    width:140px;
+    height:50px;
+}
+.chanel-interface span{
+    font-size:12px;
+    color:#a3a3a3;
+}
+.chanel-interface a{
+    color:#a3a3a3;
+}
+.movie-tittle, .chanel-name, .moive-iformation{
+    width: 180px;
+    height: 50px;
+    display: inline-block;
+} 
+.movie-tittle{
+    border:1px solid brown;
+    font-size: 14px;
+    margin-top:5px; 
+    margin-bottom: 3px;
 }
