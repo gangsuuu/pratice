@@ -1,0 +1,105 @@
+<!DCOTYPE>
+<head>
+<title>Menu-box</title>
+<style>
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background-color: blanchedalmond;
+    height: 100%;
+}
+.menu-box{
+    width:250px;
+    height: 100%;
+}
+.menu-list{
+    background-color: white;
+    display: none;
+    overflow:auto;
+    list-style-type:none;
+    height:100%;
+}
+.menu-list a{
+    width:180px;
+    display:block;
+    padding: 20px 0 20px 70px;
+    text-align: left;
+    text-decoration: none;
+}
+button{
+    margin:25px;
+    width: 35px;;
+    height: 35px;;
+}
+.playlist{
+    display: none;
+    list-style-type:none;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".menu-button").click(function(){
+            //button을 클릭해서 mnue-list를 호출 할 수 있게 이벤트 추가
+            $(".menu-list").animate({width:"toggle"});
+            //menu-list 와이드방향으로 작동하며 slide하듯 연출
+        }),//menu-button.click - end
+        $(".playlist-open").click(function(){
+            $(".playlist").show();
+            $(this).hide();
+        }),//.playlist.click - end
+        $(".playlist-close").click(function(){
+            $(".playlist").hide();
+            $(".playlist-open").show();
+        });
+    });//document.read - end
+
+</script>
+</head>
+<body>
+    <div class="menu-box">
+        <div class="menu">
+            <button type="button" class="menu-button"></button>
+        </div>
+        <ul class="menu-list">
+            <li><a href="#">홈</a></li>
+            <li><a href="#">탐색</a></li>
+            <li><a href="#">shorts</a></li>
+            <li><a href="#">구독</a></li>
+            <li><a href="#">originals</a></li>
+            <li><a href="#">YouTubeMusisc</a></li>
+            <li><a href="#">보관함</a></li>
+            <li><a href="#">시청기록</a></li>
+            <li><a href="#">내 동영상</a></li>
+            <li><a href="#">나중에 볼 동영상</a></li>
+            <li><a href="#">오프라인 저장 동영상</a></li>
+            <li><a href="#">좋아요 표시한 영상</a></li>
+            <li><a href="#" class="playlist-open">더 보기</a>
+                <ul class="playlist">
+                    <li><a href="#">list1</a></li>
+                    <li><a href="#">list2</a></li>
+                    <li><a href="#">list3</a></li>
+                    <li><a href="#">list4</a></li>
+                    <li><a href="#" class="playlist-close">간략히 보기</a></li>
+                </ul>
+            </li>
+            <li><a href="#">구독</a></li>
+            <li><a href="#">탐색</a></li>
+            <li><a href="#">영화</a></li>
+            <li><a href="#">게임</a></li>
+            <li><a href="#">학습</a></li>
+            <li><a href="#">스포츠</a></li>
+            <li><a href="#">YOUTUBE 더보기</a></li>
+            <li><a href="#">크리에이터 스튜디오</a></li>
+            <li><a href="#">YouTubeMusisc</a></li>
+            <li><a href="#">YouTube Kids</a></li>
+            <li><a href="#">YouTube TV</a></li>
+            <li><a href="#">설정</a></li>
+            <li><a href="#">신고 기록</a></li>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">의견보내기</a></li>
+        </ul>
+    </div>
+</body>
